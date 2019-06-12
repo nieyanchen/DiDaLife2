@@ -1,0 +1,67 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="rg_btn_style">
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#FFFAFA</item>
+        <item name="android:drawablePadding">1dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:padding">7dp</item>
+        <item name="android:background">@drawable/shape2</item>
+
+    </style>
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorPrimary</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+
+    </style>
+    <style name="vertical_decoration_style">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#999999</item>
+    </style>
+    <style name="horizontal_decoration_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">#999999</item>
+    </style>
+
+    <style name="Divide">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divide_height</item>
+    </style>
+    <style name="Divide.Default">
+        <item name="android:background">#FFFF</item>
+    </style>
+
+    字体
+    <style name="Textxie">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#FFFF</item>
+    </style>
+
+    <style name="Toolbar.SubTitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#FCFCFC</item>
+    </style>
+    </resources>
