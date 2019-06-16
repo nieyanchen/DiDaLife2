@@ -123,13 +123,15 @@
             android:gravity="center">
 
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:text="总支出(元)"
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
-                android:layout_marginTop="5dp"/>
+                android:layout_marginTop="5dp"
+                />
 
             <TextView
                 android:id="@+id/t_outcome"
@@ -141,7 +143,14 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
+
         </LinearLayout>
+
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDC"
+        android:layout_marginTop="1dp"></View>
 
 </LinearLayout>

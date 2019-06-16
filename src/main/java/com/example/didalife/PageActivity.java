@@ -8,9 +8,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +26,8 @@ public class PageActivity extends AppCompatActivity {
             viewPager = findViewById(R.id.viewpager);
             fragments= new ArrayList<>();
             fragments.add(new CostFragment());
-            fragments.add(new WeatherFragment());
+            fragments.add(new LuckFragment());
             fragments.add(new NewsFragment());
-            fragments.add(new UserFragment());
             adapter pageAdapter = new adapter(getSupportFragmentManager(),fragments);
             viewPager.setAdapter(pageAdapter);
             tabLayout.setupWithViewPager(viewPager);

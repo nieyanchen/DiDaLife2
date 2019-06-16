@@ -51,6 +51,7 @@ public class MenuPageActivity extends AppCompatActivity {
             toolbar.setLogo(R.mipmap.dida);
             toolbar.setTitle("DiDa Life");
             toolbar.setSubtitle("您的生活小助手");
+
             MenuPageActivity.this.setSupportActionBar(toolbar);
 
 
@@ -116,9 +117,7 @@ public class MenuPageActivity extends AppCompatActivity {
                         case R.id.item3:
                             viewPager.setCurrentItem(2);
                             break;
-                        case R.id.item4:
-                            viewPager.setCurrentItem(3);
-                            break;
+
                             default:break;
 
                     }
@@ -154,9 +153,8 @@ public class MenuPageActivity extends AppCompatActivity {
 
             fragments= new ArrayList<>();
             fragments.add(new CostFragment());
-            fragments.add(new WeatherFragment());
+            fragments.add(new LuckFragment());
             fragments.add(new NewsFragment());
-            fragments.add(new UserFragment());
             adapter pageAdapter = new adapter(getSupportFragmentManager(),fragments);
             viewPager.setAdapter(pageAdapter);
         }

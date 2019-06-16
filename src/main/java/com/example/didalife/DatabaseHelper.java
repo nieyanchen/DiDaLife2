@@ -7,7 +7,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public DatabaseHelper( Context context) {
+
+    public static final String COST_MONEY = "cost_money";
+    public static final String COST_DATE = "cost_date";
+    public static final String COST_TITLE = "cost_title";
+    public static final String IMOOC_COST = "imooc_cost";
+
+    public DatabaseHelper(Context context) {
         super(context, "imooc_daily", null, 1);
     }
 
@@ -24,15 +30,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void insertCost(CostBean costBean){
         SQLiteDatabase database = getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put("cost_title",costBean.costTitle);
-        cv.put("cost_date",costBean.costDate);
-        cv.put("cost_money",costBean.costMoney);
-        database.insert("imooc_cost",null,cv);
+        cv.put(COST_TITLE,costBean.costTitle);
+        cv.put(COST_DATE,costBean.costDate);
+        cv.put(COST_MONEY,costBean.costMoney);
+        database.insert(IMOOC_COST,null,cv);
     }
 
     public Cursor getAllCostData(){
         SQLiteDatabase database = getWritableDatabase();
-        return  database.query("imooc_cost",null,null,null,null,null,"cost_date" );
+        return  database.query("imooc_cost",null,null,null,null,null, "cost_date DESC" );
 
 
     }
