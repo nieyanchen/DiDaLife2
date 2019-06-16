@@ -19,7 +19,7 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
-        android:name="com.example.weather.Weather"
+
         android:allowBackup="true"
         android:icon="@mipmap/dida"
         android:roundIcon="@mipmap/dida"
@@ -46,6 +46,11 @@
         </activity>
 
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <activity android:name=".PageActivity">

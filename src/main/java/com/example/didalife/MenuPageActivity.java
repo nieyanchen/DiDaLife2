@@ -1,6 +1,5 @@
 package com.example.didalife;
 
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,8 +31,10 @@ public class MenuPageActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     MenuItem menuItem;
     Toolbar toolbar;
+
     String[]title={"A","B","C","D"};
-    public Context mContext;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,11 +47,14 @@ public class MenuPageActivity extends AppCompatActivity {
             setContentView(R.layout.activity_menu);
             navigationView=findViewById(R.id.navi1);
             navigationView.setItemIconTintList(null);
-        toolbar=findViewById(R.id.toolbar2);
-        toolbar.setLogo(R.mipmap.dida);
-        toolbar.setTitle("DiDa Life");
-        toolbar.setSubtitle("您的生活小助手");
-        MenuPageActivity.this.setSupportActionBar(toolbar);
+            toolbar=findViewById(R.id.toolbar2);
+            toolbar.setLogo(R.mipmap.dida);
+            toolbar.setTitle("DiDa Life");
+            toolbar.setSubtitle("您的生活小助手");
+            MenuPageActivity.this.setSupportActionBar(toolbar);
+
+
+
 
            //imageView11监听事件
             View view1 =navigationView.getHeaderView(0);
@@ -156,6 +160,8 @@ public class MenuPageActivity extends AppCompatActivity {
             adapter pageAdapter = new adapter(getSupportFragmentManager(),fragments);
             viewPager.setAdapter(pageAdapter);
         }
+
+
 
     private class  adapter extends FragmentPagerAdapter {
 

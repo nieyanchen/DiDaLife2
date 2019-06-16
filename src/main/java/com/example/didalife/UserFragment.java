@@ -1,7 +1,6 @@
 package com.example.didalife;
 
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -15,7 +14,6 @@ public class UserFragment extends Fragment {
 
     TextInputEditText textInputEditText;
     Button button;
-    TextToSpeech tts;
     Toolbar toolbar;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
