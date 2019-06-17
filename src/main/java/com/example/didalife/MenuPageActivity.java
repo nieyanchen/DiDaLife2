@@ -1,5 +1,6 @@
 package com.example.didalife;
 
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,13 +25,14 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MenuPageActivity extends AppCompatActivity {
+public class MenuPageActivity extends AppCompatActivity  {
     NavigationView navigationView;
     List<Fragment>fragments;
     ViewPager viewPager;
     BottomNavigationView bottomNavigationView;
     MenuItem menuItem;
     Toolbar toolbar;
+
 
     String[]title={"A","B","C","D"};
 
@@ -53,10 +55,11 @@ public class MenuPageActivity extends AppCompatActivity {
             toolbar.setSubtitle("您的生活小助手");
 
             MenuPageActivity.this.setSupportActionBar(toolbar);
+            //时间
 
 
 
-
+            SysApplication.getInstance().addActivity(this);
            //imageView11监听事件
             View view1 =navigationView.getHeaderView(0);
             ImageView imageView=view1.findViewById(R.id.imageView11);
@@ -67,6 +70,15 @@ public class MenuPageActivity extends AppCompatActivity {
                 }
             });
             final TextView textView=view1.findViewById(R.id.textView7);
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ComponentName componentname = new ComponentName(MenuPageActivity.this, "com.example.didalife.LoginActivity");
+                    Intent intent = new Intent();
+                    intent.setComponent(componentname);
+                    startActivity(intent);
+                }
+            });
             //侧划功能监听
             navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -77,6 +89,7 @@ public class MenuPageActivity extends AppCompatActivity {
                     } else if (id == R.id.about) {     //关于
                         startActivity(new Intent(MenuPageActivity.this, AboutActivity.class));
                     } else if (id == R.id.style1) {     //主题
+                        Toast.makeText(MenuPageActivity.this,"聂彦晨还没开发主题功能哦！",Toast.LENGTH_SHORT).show();
 
                     } else if (id == R.id.exit) {      //退出登陆
                         //退出登陆
@@ -87,7 +100,8 @@ public class MenuPageActivity extends AppCompatActivity {
                                 builder.setPositiveButton("是嘞", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        finish();
+                                        SysApplication.getInstance().exit();
+
                                     }
                                 });
                                 builder.setNegativeButton("算了",null);

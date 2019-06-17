@@ -30,7 +30,7 @@ public class luck extends SurfaceView implements SurfaceHolder.Callback,Runnable
     private  Bitmap[]mImgsBitmap;
     private Bitmap mBgBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.pan);
     //颜色
-    private  int[] mColors =new int[]{0xFFFC3005,0XFFF17E01,0xFFFC3005,0XFFF17E01,0xFFFC3005,0XFFF17E01,};
+    private  int[] mColors =new int[]{0xFFFC2025,0XFFF17E01,0xFFFC2025,0XFFF17E01,0xFFFC2025,0XFFF17E01,};
 
     private  int mItemCount = 6;
 

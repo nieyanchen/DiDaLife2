@@ -32,7 +32,7 @@ public class LuckFragment extends Fragment {
             public void onClick(View v) {
                 if (!mLuckyPan.isStart()){
                     mLuckyPan.luckyStart();
-                    mStartBtn.setImageResource(R.drawable.logo);
+                    mStartBtn.setImageResource(R.drawable.zhen);
                 }else{
                     if (!mLuckyPan.isShouldEnd()){
                         mLuckyPan.luckyEnd();

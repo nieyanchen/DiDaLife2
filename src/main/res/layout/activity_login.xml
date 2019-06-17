@@ -9,14 +9,15 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="#A1FFFCFB">
 
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="127dp"
-        app:srcCompat="@drawable/logo" />
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:srcCompat="@mipmap/dida" />
 
     <ImageView
         android:id="@+id/imageView"

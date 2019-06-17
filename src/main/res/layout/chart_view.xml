@@ -4,11 +4,33 @@
     android:layout_height="match_parent"
     android:padding="10dp">
 
-    <lecho.lib.hellocharts.view.LineChartView
-        android:id="@+id/chart"
-        android:padding="20dp"
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/black"
+        android:text="消费趋势图"
+        android:gravity="center" />
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/kuang"
+        android:orientation="vertical">
+
+        <lecho.lib.hellocharts.view.LineChartView
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="300dp"
+            android:gravity="center"
+            android:padding="60dp" />
+    </LinearLayout>
 
 </LinearLayout>

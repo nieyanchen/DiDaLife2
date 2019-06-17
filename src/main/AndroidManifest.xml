@@ -8,7 +8,6 @@
     <uses-permission
         android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
         tools:ignore="ProtectedPermissions" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -19,54 +18,32 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
-
         android:allowBackup="true"
         android:icon="@mipmap/dida"
-        android:roundIcon="@mipmap/dida"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/dida"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutActivity"></activity>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AboutActivity" />
         <activity android:name=".SettingActivity" />
 
         <meta-data
             android:name="com.thinkland.juheapi.openid"
             android:value="c12908c9c7fddaad38def3ee256308f4" />
 
-        <activity android:name=".AddCostActivity">
-
-        </activity>
-        <activity android:name=".MenuActivity">
-
-
-        </activity>
+        <activity android:name=".AddCostActivity" />
         <activity android:name=".Login2Activity" />
-        <activity android:name=".LoginActivity">
-
-        </activity>
-
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".PageActivity">
-
-        </activity>
-        <activity android:name=".ChartsActivity">
-
-        </activity>
-
-        <activity android:name=".MenuPageActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".PageActivity" />
+        <activity android:name=".ChartsActivity" />
+        <activity android:name=".MenuPageActivity"></activity>
     </application>
 
 </manifest>
