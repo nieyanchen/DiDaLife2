@@ -16,11 +16,14 @@
         android:theme="?attr/actionBarTheme"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/news"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="cccc"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/news_lv"
+            android:dividerHeight="3dp"
+            android:divider="#dcdcdc">
+        </ListView>
+
 
 </LinearLayout>
