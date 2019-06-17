@@ -69,7 +69,7 @@ public class NewsFragment extends Fragment {
             @Override
             public void run() {
                 try{
-                    //获取虎扑新闻20页的数据，网址格式为：https://voice.hupu.com/nba/第几页
+                   
                     for(int i = 1;i<=20;i++) {
 
                         Document doc = Jsoup.connect("https://voice.hupu.com/nba/" + Integer.toString(i)).get();

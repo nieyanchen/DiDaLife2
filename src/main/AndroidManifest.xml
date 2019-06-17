@@ -34,7 +34,7 @@
         </activity>
         <activity android:name=".AboutActivity" />
         <activity android:name=".SettingActivity" />
-
+        <activity android:name=".NewsDisplayActvivity"></activity>
         <meta-data
             android:name="com.thinkland.juheapi.openid"
             android:value="c12908c9c7fddaad38def3ee256308f4" />
