@@ -18,7 +18,18 @@
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-        <com.example.didalife.luck
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="35dp"
+        android:gravity="center"
+        android:text="今天吃啥？"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary" />
+
+    <com.example.didalife.luck
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding ="30dp"

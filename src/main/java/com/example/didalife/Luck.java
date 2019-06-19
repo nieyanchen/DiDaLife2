@@ -23,9 +23,9 @@ public class luck extends SurfaceView implements SurfaceHolder.Callback,Runnable
     // 线程控制开关
     private  boolean isRunning;
     //名称
-    private String[]mStr = new String[]{"单反相机","ipad","单反相机","手机","电脑","ipad"};
+    private String[]mStr = new String[]{"食堂","米线","火锅","汉堡","烧烤","修仙不吃"};
    //图片
-    private int[] mImgs = new int[]{R.drawable.ca,R.drawable.ipad,R.drawable.ca,R.drawable.p,R.drawable.c,R.drawable.ipad};
+    private int[] mImgs = new int[]{R.drawable.shitang,R.drawable.miantiao,R.drawable.huoguo,R.drawable.hanbao,R.drawable.shaokao,R.drawable.buchi};
     //数组
     private  Bitmap[]mImgsBitmap;
     private Bitmap mBgBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.pan);

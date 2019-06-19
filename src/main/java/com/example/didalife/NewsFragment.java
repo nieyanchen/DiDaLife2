@@ -69,7 +69,7 @@ public class NewsFragment extends Fragment {
             @Override
             public void run() {
                 try{
-                   
+
                     for(int i = 1;i<=20;i++) {
 
                         Document doc = Jsoup.connect("https://voice.hupu.com/nba/" + Integer.toString(i)).get();
@@ -80,7 +80,6 @@ public class NewsFragment extends Fragment {
                         for(int j = 0;j < titleLinks.size();j++){
                             String title = titleLinks.get(j).select("a").text();
                             String uri = titleLinks.get(j).select("a").attr("href");
-                            //   String desc = descLinks.get(j).select("span").text();
                             String time = timeLinks.get(j).select("span.other-left").select("a").text();
                             News news = new News(title,uri,null,time);
                             newsList.add(news);

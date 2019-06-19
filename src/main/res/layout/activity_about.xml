@@ -70,6 +70,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
+            android:padding="5dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
             android:text="        DiDa Life是一款集记账、网站查询、资讯查询、语音播报等功能为一体的便携式生活软件，用于满足用户日常生活中的多种需求。"

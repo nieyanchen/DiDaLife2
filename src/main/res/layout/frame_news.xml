@@ -28,15 +28,23 @@
             android:layout_height="wrap_content"
             android:text="DiDa资讯"
             android:textColor="@color/colorPrimary"
-            android:textSize="28sp" />
+            android:textSize="28sp"
+            android:padding="5dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="5dp"></View>
 
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/news_lv"
             android:dividerHeight="3dp"
-            android:layout_marginTop="20dp"
-            android:divider="#dcdcdc">
+            android:layout_gravity="start"
+            android:divider="#dcdcdc"
+            android:padding="3dp"
+            android:textAlignment="textStart">
         </ListView>
     </LinearLayout>
 

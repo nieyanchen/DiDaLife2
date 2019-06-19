@@ -32,7 +32,7 @@ public class SysApplication extends Application {
     }
 
 
-    //杀进程
+
     @Override
     public void onLowMemory() {
         super.onLowMemory();
