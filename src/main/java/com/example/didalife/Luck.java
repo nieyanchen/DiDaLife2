@@ -26,28 +26,19 @@ public class luck extends SurfaceView implements SurfaceHolder.Callback,Runnable
     private String[]mStr = new String[]{"食堂","米线","火锅","汉堡","烧烤","修仙不吃"};
    //图片
     private int[] mImgs = new int[]{R.drawable.shitang,R.drawable.miantiao,R.drawable.huoguo,R.drawable.hanbao,R.drawable.shaokao,R.drawable.buchi};
-    //数组
     private  Bitmap[]mImgsBitmap;
     private Bitmap mBgBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.pan);
-    //颜色
     private  int[] mColors =new int[]{0xFFFC2025,0XFFF17E01,0xFFFC2025,0XFFF17E01,0xFFFC2025,0XFFF17E01,};
 
     private  int mItemCount = 6;
-
-    //画笔
     private Paint mArcPaint;
-    //文本画笔
     private Paint mTextPaint;
 
 
 
     private  float mTextSize = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,20,getResources().getDisplayMetrics());
-    //整个盘范围
     private RectF mRange = new RectF();
-    //直径
     private  int mRadius;
-
-    //滚动速度
     private  double mSpeed ;
     //角度
     private  volatile int mStartAngle = 0;
@@ -68,10 +59,8 @@ public class luck extends SurfaceView implements SurfaceHolder.Callback,Runnable
         super(context, attrs);
         mHolder = getHolder();
         mHolder.addCallback(this);
-        //可获得焦点
         setFocusable(true);
         setFocusableInTouchMode(true);
-        //
         setKeepScreenOn(true);
     }
 
@@ -91,19 +80,14 @@ public class luck extends SurfaceView implements SurfaceHolder.Callback,Runnable
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
-        //初始化画笔
         mArcPaint = new Paint();
         mArcPaint.setAntiAlias(true);
         mArcPaint.setDither(true);
-        //初始化画笔
 
         mTextPaint= new Paint();
         mTextPaint.setColor(0xffffffff);
         mTextPaint.setTextSize(mTextSize);
-
-        //初始化盘绘制范围
         mRange = new RectF(mPadding,mPadding,mPadding+mRadius,mPadding+mRadius);
-        //初始化图片
         mImgsBitmap = new Bitmap[mItemCount];
         for (int i = 0; i < mItemCount;i++){
             mImgsBitmap[i] = BitmapFactory.decodeResource(getResources(),mImgs[i]);
@@ -147,7 +131,6 @@ public class luck extends SurfaceView implements SurfaceHolder.Callback,Runnable
 
         mCanvas = mHolder.lockCanvas();
         if (mCanvas != null) {
-            //背景绘制
             drawBg();
             //盘
             float tmpAngle = mStartAngle;
@@ -155,9 +138,7 @@ public class luck extends SurfaceView implements SurfaceHolder.Callback,Runnable
             for(int i = 0; i < mItemCount;i++){
 
                 mArcPaint.setColor(mColors[i]);
-                //盘
                 mCanvas.drawArc(mRange,tmpAngle,sweepAngle,true,mArcPaint);
-                //文本
                 drawText(tmpAngle,sweepAngle,mStr[i]);
 
                 drawIcon(tmpAngle,mImgsBitmap[i]);

@@ -80,7 +80,7 @@ public class NewsFragment extends Fragment {
                             String title = titleLinks.get(j).select("a").text();
                             String uri = titleLinks.get(j).select("a").attr("href");
                             String time = timeLinks.get(j).select("span.other-left").select("a").text();
-                            News news = new News(title,uri,null,time);
+                            News news = new News(title,uri,time);
                             newsList.add(news);
                         }
                     }

@@ -46,7 +46,7 @@ public class NewsAdapter extends BaseAdapter {
             viewHolder = new ViewHolder();
             viewHolder.newsTitle = (TextView) view
                     .findViewById(R.id.news_title);
-            viewHolder.newsDesc = (TextView)view.findViewById(R.id.news_desc);
+
             viewHolder.newsTime = (TextView)view.findViewById(R.id.news_time);
             view.setTag(viewHolder);
         } else {
@@ -54,8 +54,8 @@ public class NewsAdapter extends BaseAdapter {
             viewHolder = (ViewHolder) view.getTag();
         }
         viewHolder.newsTitle.setText(newsList.get(position).getNewsTitle());
-        viewHolder.newsDesc.setText(newsList.get(position).getDesc());
-        viewHolder.newsTime.setText("来自 : "+newsList.get(position).getNewsTime());
+
+        viewHolder.newsTime.setText("发布于 : "+newsList.get(position).getNewsTime());
         return view;
     }
 

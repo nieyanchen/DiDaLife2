@@ -98,7 +98,7 @@ public class LuckFragment extends Fragment {
                     Toast.makeText(getActivity(),"停止摇动,转盘停止",Toast.LENGTH_LONG).show();
                 case 20:
                     mLuckyPan.luckyEnd();
-                    
+
                     break;
             }
         }

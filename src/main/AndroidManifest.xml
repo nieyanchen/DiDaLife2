@@ -40,7 +40,6 @@
             android:name="com.thinkland.juheapi.openid"
             android:value="c12908c9c7fddaad38def3ee256308f4" />
 
-        <activity android:name=".AddCostActivity" />
         <activity android:name=".Login2Activity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".PageActivity" />
