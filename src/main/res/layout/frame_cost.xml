@@ -13,14 +13,6 @@
         layout="@layout/top_date"></include>
 
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="350dp"
-        android:layout_marginTop="15dp"
-        app:srcCompat="@mipmap/tabbar_icon3_0" />
-
     <android.support.v4.widget.SwipeRefreshLayout
         android:layout_below="@+id/layout_top"
         android:id="@+id/swipe"
@@ -34,12 +26,24 @@
             android:orientation="vertical">
 
 
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="13dp"
+                        android:layout_gravity="right"
+                        android:textColor="@color/colorPrimary"
+                        android:text="查看消费趋势图" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -88,7 +92,11 @@
                             app:srcCompat="@drawable/money" />
 
                     </LinearLayout>
+
                 </LinearLayout>
+
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -123,27 +131,34 @@
                         android:text="支出额" />
                 </LinearLayout>
 
+
+
                 <ListView
                     android:id="@+id/lv_main"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_gravity="start"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="65dp"
-                    android:dividerHeight="6dp"
-                    android:layout_gravity="start"
-                    android:divider="#FFFFFF"
-                    android:textAlignment="textStart"
                     android:background="@drawable/shape4"
                     android:cacheColorHint="#FFFFFF"
+                    android:divider="#FFFFFF"
+                    android:dividerHeight="6dp"
                     android:drawSelectorOnTop="false"
                     android:fadingEdge="none"
                     android:listSelector="#00FFFFFF"
-                    />
+                    android:textAlignment="textStart" />
 
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"></LinearLayout>
 
 
         </RelativeLayout>

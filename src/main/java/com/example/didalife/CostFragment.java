@@ -17,7 +17,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -91,8 +90,8 @@ public class CostFragment extends Fragment {
 
 
 
-        ImageView imageView = view1.findViewById(R.id.imageView3);
-        imageView.setOnClickListener(new View.OnClickListener() {
+        TextView textView = view1.findViewById(R.id.imageView3);
+        textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(),ChartsActivity.class);
