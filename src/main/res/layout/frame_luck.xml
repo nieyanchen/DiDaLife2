@@ -26,8 +26,21 @@
         android:layout_marginTop="35dp"
         android:gravity="center"
         android:text="今天吃啥？"
-        android:textSize="30sp"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="139dp"
+        android:layout_marginRight="139dp"
+        android:layout_marginBottom="102dp"
+        android:text="摇一摇触发转盘功能"
+        android:textColor="#C9C9C9" />
 
     <com.example.didalife.luck
             android:layout_width="match_parent"

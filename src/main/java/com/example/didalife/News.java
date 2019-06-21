@@ -1,10 +1,10 @@
 package com.example.didalife;
 
 public class News {
-    private String newsTitle;   //新闻标题
-    private String newsUrl;     //新闻链接地址
-    private String desc;        //新闻概要
-    private String newsTime;    //新闻时间与来源
+    private String newsTitle;   //新标题
+    private String newsUrl;     //链接地址
+    private String desc;        //概要
+    private String newsTime;    //时间与来源
 
     public News(String newsTitle, String newsUrl, String desc, String newsTime) {
         this.newsTitle = newsTitle;

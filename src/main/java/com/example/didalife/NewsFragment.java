@@ -74,7 +74,6 @@ public class NewsFragment extends Fragment {
 
                         Document doc = Jsoup.connect("https://voice.hupu.com/nba/" + Integer.toString(i)).get();
                         Elements titleLinks = doc.select("div.list-hd");
-
                         Elements timeLinks = doc.select("div.otherInfo");
                         Log.e("title",Integer.toString(titleLinks.size()));
                         for(int j = 0;j < titleLinks.size();j++){

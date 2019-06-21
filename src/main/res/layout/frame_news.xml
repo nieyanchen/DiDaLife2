@@ -21,7 +21,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="90dp">
+        android:layout_marginBottom="65dp">
 
         <TextView
             android:layout_width="match_parent"
@@ -31,21 +31,26 @@
             android:textSize="28sp"
             android:padding="5dp"/>
         <View
-            android:layout_width="match_parent"
+            android:layout_width="123dp"
             android:layout_height="2dp"
-            android:background="@color/colorPrimary"
-            android:layout_marginTop="5dp"></View>
+            android:background="@color/colorPrimary"></View>
 
         <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:id="@+id/news_lv"
-            android:dividerHeight="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="528dp"
             android:layout_gravity="start"
-            android:divider="#dcdcdc"
-            android:padding="3dp"
-            android:textAlignment="textStart">
-        </ListView>
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape"
+            android:cacheColorHint="#FFFFFF"
+            android:divider="#FFFFFF"
+            android:dividerHeight="5dp"
+            android:drawSelectorOnTop="false"
+            android:fadingEdge="none"
+            android:listSelector="#00FFFFFF"
+            android:textAlignment="textStart"></ListView>
     </LinearLayout>
 
 </LinearLayout>
