@@ -135,7 +135,7 @@ public class CostFragment extends Fragment {
 
 
     private void initCostDate() {
-       //   mDatabaseHelper.deleteAllData();
+        //  mDatabaseHelper.deleteAllData();
       /*  for (int i=0; i<2;i++) {
             CostBean costBean = new CostBean();
             costBean.costTitle = i+"dddd" ;
